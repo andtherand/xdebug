@@ -8,17 +8,10 @@ when "debian"
         action :install
     end
 
-
 when "rhel"
   # do things on RHEL platforms (redhat, centos, scientific, etc)
 end
 
-
-#Install Xdebug
-php_pear "xdebug" do
-	zend_extensions ['xdebug.so']
-  action :install
-end
 
 template "#{node['php']['ext_conf_dir']}/xdebug.ini" do
   source "xdebug.ini.erb"
