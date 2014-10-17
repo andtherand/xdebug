@@ -1,6 +1,19 @@
 include_recipe "php"
 include_recipe "apache2"
 
+case node["platform_family"]
+when "debian"
+
+    package 'php5-xdebug' do
+        action :install
+    end
+
+
+when "rhel"
+  # do things on RHEL platforms (redhat, centos, scientific, etc)
+end
+
+
 #Install Xdebug
 php_pear "xdebug" do
 	zend_extensions ['xdebug.so']
