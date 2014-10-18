@@ -1,0 +1,1 @@
+default[:xdebug][:ini_name] = 'xdebug.ini'
