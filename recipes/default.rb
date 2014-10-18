@@ -13,7 +13,7 @@ when "rhel"
 end
 
 
-template "#{node['php']['ext_conf_dir']}/#{node['xdebug'][ini_name]}" do
+template "#{node['php']['ext_conf_dir']}/#{node['xdebug']['ini_name']}" do
   source "xdebug.ini.erb"
   owner "root"
   group "root"
