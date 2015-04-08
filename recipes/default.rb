@@ -1,6 +1,6 @@
 #Install Xdebug
 php_pear "xdebug" do
-	zend_extensions ['xdebug.so']
+  zend_extensions ['xdebug.so']
   action :install
 end
 
