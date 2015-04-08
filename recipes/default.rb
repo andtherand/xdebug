@@ -4,7 +4,7 @@ php_pear "xdebug" do
   action :install
 end
 
-template "#{node[:xdebug][:conf_dir]}/xdebug.ini" do
+template "#{node[:xdebug][:ini]}" do
   source "xdebug.ini.erb"
   owner "root"
   group "root"
