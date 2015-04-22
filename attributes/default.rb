@@ -1,1 +1,1 @@
-default[:xdebug][:ini] = '/etc/php5/apache2/conf.d/20-xdebug.ini'
+default['xdebug']['ini'] = '/etc/php5/apache2/conf.d/20-xdebug.ini'

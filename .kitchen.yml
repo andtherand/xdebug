@@ -1,0 +1,28 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-14.04
+
+    driver:
+      vagrantfile_erb: Vagrantfile.erb
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apt]
+      - recipe[php]
+      - recipe[apache2::default]
+      - recipe[apache2::mod_php5]
+      - recipe[xdebug::default]
+    attributes:
+      apache:
+        mpm: prefork
+
+      php:
+        ext_conf_dir: /etc/php5/apache2/conf.d
+
